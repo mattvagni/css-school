@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+
+    To cover
+    - CSS has a LOT of units you can ignore almost all of them.
+
+    - Units break down in relative and non-relative units
+      - relative unis are based off something else
+      - absolute units are constant
+
+    - Absolute units you care about:
+      - px "the OG"
+
+    - Relative units you care about:
+      - em: font size of the parent. useful for like relative sizing like an annotation
+      - rem: font size of the document.
+      - %: also based on the parent
+      - vh: Height of the viewport
+      - vw: Width of the viewport
+
+    - There are also unitless things and colors like
+      - opacity: 0.5;
+      - line-height: 1.4;
+      - color: #bada55;
+
+    Reading:
+    - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units
+
+    -->
+    <style>
+      body {
+        font-family: 'Comic Sans MS';
+        font-size: 24px;
+      }
+
+      sup {
+        font-size: 0.5em;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Win a free cruise!<sup>1</sup></h1>
+    <p>
+      Sign up now and win a free cruis, we really promise this is not spam
+      <sup>2</sup>
+    </p>
+  </body>
+</html>

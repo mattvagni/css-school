@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+
+    To cover
+    - display: flex;
+
+    - Flexbox is 1 dimension vs grid which is 2 dimensional
+
+    - Use flex for 1 dimensional layouts
+      +-----+ +-------------------+ +-----------+
+      |     | |                   | |           |
+      |     | |                   | |           |
+      +-----+ +-------------------+ +-----------+
+
+    - Use grid for 2 dimensional layouts
+      +-----+ +-------------------+ +-----------+
+      |     | |                   | |           |
+      |     | |                   | |           |
+      +-----+ +-------------------+ |           |
+      +-----+ +---------+ +-------+ |           |
+      |     | |         | |       | |           |
+      |     | |         | |       | |           |
+      +-----+ +---------+ +-------+ +-----------+
+
+    - To be productive with flexbox 99% of the time you need
+      the following properties:
+
+    - On the parent with display: flex;
+
+      - flex-direction
+        - is it left to right, top to bottom, right to left etc.
+        - default is left to right also called "row"
+
+      - justify-content
+        - determiinses how children are distributed across the
+          so called 'main' direction of the flex container
+        - Also used for grid stuff so docs are confusing
+
+      - align-items
+        - determins how childre are distributed across the other axis
+          of the flex container.
+
+    - On the children of a parent with flex:
+
+      - flex-grow
+        - Determines how the remaining space is distributed amongst siblings
+        - Default is 0
+        - Demo: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-grow
+
+      - flex-shrink
+        - Determines how elements should be shrunk down if they take two much space up
+        - Default is 1
+        - Demo: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-shrink
+
+      - flex-basis
+        - Basically min-width or min-height but doesn't care about the direction.
+        - Only applies in the direction you are flexing
+        - Demo: https://developer.mozilla.org/en-US/docs/Web/CSS/flex-basis
+
+    - There is a lot lot more to flexbox.
+    - The future is grid once browser support gets there and RN supports it.
+
+    Reading:
+    - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+    - https://flexboxfroggy.com/
+
+    -->
+
+    <style>
+      /*
+        Things to show LIVE:
+        - Different flex-grows
+        - Icon/row example with flex-shrink: 0;
+        - Left vs right
+        - Two things centered
+        - Some margin around elements
+      */
+
+      .row {
+        display: flex;
+        height: 200px;
+        background: #bada55;
+      }
+
+      .pink {
+        background: lightpink;
+        flex: 1;
+      }
+
+      .green {
+        background: lightseagreen;
+        flex: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <div class="box pink">hello</div>
+      <div class="box green">this is something else</div>
+    </div>
+  </body>
+</html>

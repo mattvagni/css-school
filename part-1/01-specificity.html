@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+
+    To cover
+    - Specifity comes from selector strength and order
+    - The order in which css classes are added don't matter
+    - If you are fighting the 'specifity wars' you are already in a dark place
+
+    Why is this useful?
+    - Helps you write less css, real example of a button
+
+    Reading:
+    - https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#Specificity_2
+
+    Transition:
+    - Now let's look at some
+
+    -->
+
+    <style>
+      .box {
+        width: 40px;
+        height: 40px;
+        margin: 10px;
+      }
+
+      .red {
+        background: red;
+      }
+
+      .blue {
+        background: blue;
+      }
+
+      /* div.red {
+        background: red;
+      } */
+
+      /* .red {
+       background: tomato;
+     } */
+    </style>
+  </head>
+  <body>
+    <div class="box red blue"></div>
+    <div class="box blue red"></div>
+  </body>
+</html>

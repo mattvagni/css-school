@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+
+    To cover
+    - There are generally 2 kinds of boxes in css:
+      - block (like paragraphs)
+      - inline (like words in a paragram)
+
+    - Block elements:
+      - Will be on it's own line
+      - Width and height work
+      - Padding, margins and borders push other elements
+      - Will generally fill the width of the parent
+      - Size is determined as size + padding + border === actual size
+        - This can be overriden by box-sizing
+
+    - Inline elements:
+      - Will be in the same line as other things
+      - Vertical padding, margins and borders won't push other elements
+      - Horizontal padding, margins and borders will push other elements
+
+    - HTML Elements have are always either one or the other. Most are block.
+
+    - You can change / modify this using the display property.
+
+    - Display properties determines how something flows in the page (outside)
+    - And how something's childrens are layout out (inside)
+
+    - Outside ones
+      - block
+      - inline
+      - inline-block
+
+    - Outside + inside
+      - flex
+      - grid
+
+    Why is this useful?
+    - This is the first building block to doing any layout.
+
+    Reading:
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/display
+
+    -->
+
+    <style>
+      .block {
+        border: 2px solid green;
+      }
+
+      .inline {
+        background-color: tomato;
+        color: white;
+        margin: 16px;
+        display: inline;
+      }
+
+      .inline-block {
+        background-color: blue;
+        color: white;
+        margin: 16px;
+        padding: 8px;
+        display: inline-block;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="block">
+      One <span class="inline">November</span>
+      <span class="inline">November</span>, so the story runs, two brothers sat
+      over their winter fire in the little French town of Annonay, watching the
+      grey smoke-wreaths from...
+    </p>
+    <p class="block">
+      Before that night—a memorable night, as it was to prove—hundreds of
+      millions of
+      <span class="inline-block">people had watched the rising</span>
+      smoke-wreaths of their fires without drawing any special inspiration from
+      the fact.”
+    </p>
+  </body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+
+    To cover
+    - Padding is visually within an alement
+    - Instead, margin are outside
+
+    - The true 'visual' size of something is width + padding + border.
+
+    - Margins collapse between adjacent elements most of the time
+      - When something is block level
+      - Is not absolutely positioned
+
+    - Margins don't collapse between parent and children if:
+      - The parent has overflow set to anything but auto
+      - The parent has padding or a border
+
+    Why is this useful?
+    - This is not a bug with browsers or anything, once you know, you know.
+
+    Reading:
+    - https://www.sitepoint.com/collapsing-margins/
+
+    -->
+
+    <style>
+      .box {
+        width: 50px;
+        height: 50px;
+        background: red;
+        border: 20px solid black;
+        padding: 20px;
+        margin: 50px;
+      }
+
+      .border-box {
+        box-sizing: border-box;
+      }
+
+      p {
+        margin: 20px 0;
+      }
+
+      .card {
+        background: lightseagreen;
+        /* padding: 1px; */
+      }
+
+      .foo {
+        margin: 30px;
+        /* padding: 1px; */
+      }
+      .a {
+        background: #777;
+      }
+      .b {
+        background: #999;
+      }
+      .c {
+        background: #bbb;
+      }
+      .d {
+        background: #ddd;
+      }
+      .e {
+        background: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+    <div class="box border-box"></div>
+
+    <div class="card">
+      <p>A paragraph</p>
+
+      <p>Another paragraph</p>
+
+      <p>Another paragraph</p>
+    </div>
+
+    <p>Another paragraph</p>
+
+    <div class="foo a">
+      <div class="foo b">
+        <div class="foo c">
+          <div class="foo d">
+            <div class="foo e">
+              hello twitter
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

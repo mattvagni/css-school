@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+
+    <!--
+
+    To cover
+    - Position allows you to change somethings position without
+      changing the order of your html or the specific flow.
+
+    - There are 4 kinds of positioning you mostly care about:
+
+    - "static"
+      - The default, this is where it would have been anyways
+      - top, left, etc. have no effect
+
+    - "relative"
+      - Starting point is where it would be anyways
+      - top, left etc. offset it without effecting other elements
+
+    - "absolute"
+      - element is removed from page flow
+      - top, left etc. based on the next relative parent
+
+    - "fixed"
+      - element is removed from page flow
+      - top, left etc. based on the viewport
+
+    Fun fact:
+     - if you specify both left + right the direction of your document will win.
+       e.g. in a left-to-right language left will win.
+
+
+    Reading:
+    - https://developer.mozilla.org/en-US/docs/Web/CSS/position
+
+    -->
+
+    <style>
+      .red {
+        width: 100px;
+        height: 100px;
+        background: red;
+        margin: 40px;
+      }
+
+      .blue {
+        width: 30px;
+        height: 30px;
+        background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="red">
+      <div class="blue"></div>
+    </div>
+  </body>
+</html>
+
+<!-- background: linear-gradient(180deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%); -->
